@@ -1,2 +1,2 @@
-import gif from "./gif.gif";
-export default gif;
+import gif from './gif.gif'
+export default gif

@@ -1,21 +1,17 @@
 {
-  "name": "rollup-plugin-imagemin",
-  "version": "0.5.0",
+  "name": "@temasm/rollup-plugin-imagemin",
+  "version": "0.6.0",
+  "packageManager": "pnpm@7.18.2",
   "description": "Imagemin meets Rollup!",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
-  "main": "dist/index.cjs.js",
-  "scripts": {
-    "clean": "npx rimraf dist",
-    "build": "npm run clean && npx rollup -c rollup.config.js",
-    "lint": "npx eslint src/index.js test/index.js",
-    "test": "npx mocha --require @babel/register ./test/index.js",
-    "prepare": "npm run build",
-    "prepublish": "npm run lint && npm test"
-  },
+  "author": "Jeremy L. Wagner <jeremy.l.wagner@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/TemaSM/rollup-plugin-imagemin",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/malchata/rollup-plugin-imagemin.git"
+    "url": "git+ssh://git@github.com/TemaSM/rollup-plugin-imagemin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TemaSM/rollup-plugin-imagemin/issues"
   },
   "keywords": [
     "image",
@@ -24,7 +20,21 @@
     "performance",
     "webperf"
   ],
-  "author": "Jeremy L. Wagner <jeremy.l.wagner@gmail.com>",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "scripts": {
+    "clean": "npx rimraf dist",
+    "build": "npm run clean && npx rollup -c rollup.config.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "npx mocha ./test/index.mjs",
+    "prepare": "npm run build",
+    "prepublish": "npm run lint && npm test"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "contributors": [
     {
       "name": "GerkinDev",
@@ -32,30 +42,27 @@
       "url": "https://ithoughts.io/"
     }
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/malchata/rollup-plugin-imagemin/issues"
-  },
-  "homepage": "https://github.com/malchata/rollup-plugin-imagemin#readme",
   "dependencies": {
-    "chalk": "^4.1.0",
-    "imagemin": "^7.0.1",
+    "@rollup/pluginutils": "^5.0.2",
+    "chalk": "^4.1.2",
+    "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^9.0.0",
-    "mkpath": "^1.0.0",
-    "@rollup/pluginutils": "^4.1.0"
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "mkpath": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.8",
-    "@babel/preset-env": "^7.13.9",
-    "@babel/register": "^7.13.8",
-    "eslint": "^7.21.0",
-    "mocha": "^8.3.0",
+    "@antfu/eslint-config": "^0.34.0",
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "@rollup/plugin-babel": "^6.0.3",
+    "eslint": "^8.30.0",
+    "mocha": "^10.2.0",
+    "pnpm": "^7.18.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.40.0",
-    "rollup-plugin-babel": "^4.3.3",
+    "rollup": "^3.7.5",
     "simple-mock": "^0.8.0"
   }
 }

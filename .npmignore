@@ -1,8 +1,11 @@
+src
 *.js.map
 *.mjs.map
 test
 CONTRIBUTING.md
 babel.config.js
-rollup.config.js
+rollup.config.mjs
+.vscode/settings.json
+.editorconfig
 .eslintrc
-src
+.mocharc.js

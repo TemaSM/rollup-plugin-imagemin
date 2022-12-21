@@ -1,6 +1,6 @@
 ## Contributing
 
-`rollup-plugin-imagemin` should serve admirably for your purposes, but as we're all aware, bugs can crop up in unexpected places. If you find anything wrong, please file an issue (after first looking at [the list of existing issues](https://github.com/malchata/rollup-plugin-imagemin/issues), of course) and include the following:
+`rollup-plugin-imagemin` should serve admirably for your purposes, but as we're all aware, bugs can crop up in unexpected places. If you find anything wrong, please file an issue (after first looking at [the list of existing issues](https://github.com/TemaSM/rollup-plugin-imagemin/issues), of course) and include the following:
 
 - A stack trace of the error you're receiving (if you're receiving one).
 - Your OS version.

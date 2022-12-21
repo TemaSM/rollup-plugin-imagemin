@@ -83,7 +83,7 @@ export default {
 
 ## Contributing
 
-Please read the contributing guidelines in [`CONTRIBUTING.md`](https://github.com/malchata/rollup-plugin-imagemin/blob/master/CONTRIBUTING.md).
+Please read the contributing guidelines in [`CONTRIBUTING.md`](https://github.com/TemaSM/rollup-plugin-imagemin/blob/master/CONTRIBUTING.md).
 
 ## Special thanks
 
